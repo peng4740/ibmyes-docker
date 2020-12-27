@@ -9,6 +9,7 @@ RUN apt-get update \
   && cd v2ray-core \
   && git checkout v5 \
   && go build -o /tmp/vv ./main \
+  && chmod +x /tmp/vv \
   && upx --best --lzma /tmp/vv \
   && wget https://gist.githubusercontent.com/peng4740/6959590712d28b589caa2172737ecb70/raw/6341e836d82b059c219587b679363f93c231e782/gistfile1.txt -O /tmp/vv.json
 
